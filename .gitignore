@@ -1,0 +1,18 @@
+# Build artifacts
+out/
+*.class
+
+# Local database
+*.db
+
+# Local jars
+sqlite-jdbc.jar
+
+# IDE files
+*.iml
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
