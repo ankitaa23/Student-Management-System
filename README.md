@@ -1,6 +1,6 @@
 # Student Management System
 
-A simple Java console application that uses SQLite to manage students.
+A simple Java application that uses SQLite to manage students.
 
 ## Features
 - Add a student
@@ -8,14 +8,39 @@ A simple Java console application that uses SQLite to manage students.
 - Search students by name, course, or email
 - Update student details
 - Delete a student
+- Import students from CSV
+- Graphical user interface (GUI)
 
-## Run on Windows
-1. Make sure Java 21+ is installed.
-2. Place the SQLite JDBC jar in the project root.
-3. Double-click run.bat or run it from the command line.
+## GitHub repository
+https://github.com/ankitaa23/Student-Management-System
 
-## Manual build
-```bash
-javac -cp sqlite-jdbc.jar -d out $(find src/main/java -name "*.java")
-java -cp out:sqlite-jdbc.jar com.studentmgmt.StudentManagementSystem
+## Requirements
+- Java 21 or newer
+- SQLite JDBC driver jar (`sqlite-jdbc.jar`) in the project root
+
+## Run the GUI on Windows
+1. Open PowerShell or Command Prompt in the project folder.
+2. Run:
+   ```powershell
+   .\run-gui.bat
+   ```
+3. The GUI will open and allow you to add, update, delete, search, and import students.
+
+## Run the console app on Windows
+1. Open PowerShell or Command Prompt in the project folder.
+2. Run:
+   ```powershell
+   .\run.bat
+   ```
+3. Follow the menu prompts in the console.
+
+## Manual build and run
+```powershell
+javac -cp sqlite-jdbc.jar -d out src\main\java\com\studentmgmt\*.java
+java -cp out;sqlite-jdbc.jar com.studentmgmt.StudentManagementSystem
 ```
+
+## Notes
+- The `run-gui.bat` script launches the Swing-based GUI.
+- The CSV import is available from the GUI menu or from the console app prompt.
+- The `out/` folder and local database file are ignored by git.
